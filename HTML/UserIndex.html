@@ -1,0 +1,180 @@
+<div
+  class="flex flex-col justify-between gap-4 mb-6 w-full bg-white rounded-lg shadow p-4"
+>
+  <div class="flex flex-col sm:flex-row justify-between items-center mb-4">
+    <div class="text-xl font-bold mb-2 sm:mb-0">Ecran Admin</div>
+  </div>
+  <div class="flex flex-col sm:flex-row justify-between items-center">
+    <div class="flex flex-wrap justify-center sm:justify-start gap-2">
+      <button class="bg-red-500 text-white px-3 py-1 rounded">ALL</button>
+      <button class="bg-white border border-gray-300 px-3 py-1 rounded">
+        Admin
+      </button>
+      <button class="bg-white border border-gray-300 px-3 py-1 rounded">
+        Boutiquier
+      </button>
+      <button class="bg-white border border-gray-300 px-3 py-1 rounded">
+        Client
+      </button>
+    </div>
+    <button
+      id="nouveauUserButton"
+      data-modal-target="userModal"
+      data-modal-toggle="userModal"
+      class="bg-blue-600 text-white px-4 py-2 rounded mt-2 sm:mt-0"
+    >
+      NOUVEAU
+    </button>
+  </div>
+  <!-- Table responsive -->
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white">
+      <thead class="bg-blue-600 text-white">
+        <tr>
+          <th class="py-2 px-4 text-center">ROLE</th>
+          <th class="py-2 px-4 text-center">NOM COMPLET</th>
+          <th class="py-2 px-4 text-center">LOGIN</th>
+          <th class="py-2 px-4 text-center">TELEPHONE</th>
+          <th class="py-2 px-4 text-center">ACTION</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-700">
+        <tr>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">client</td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            ousseynou diedhiou
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            diedhiou@gmail.com
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            785304869
+          </td>
+          <td
+            class="border-t border-gray-200 py-2 px-4 text-center mt-2 sm:mt-0"
+          >
+            <button
+              id="compte"
+              data-modal-target="compteModal"
+              data-modal-toggle="compteModal"
+              title="CREATION COMPTE"
+              class="bg-blue-500 text-white py-1 px-4 rounded"
+            >
+              <i class="fas fa-user-plus mr-2"></i>
+            </button>
+            <button
+              id="nouveauUserButton"
+              data-modal-target="userModal"
+              data-modal-toggle="userModal"
+              title="MODIFIER"
+              class="bg-blue-500 text-white px-3 py-1 rounded"
+            >
+              <i class="fas fa-edit"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">admin</td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            ibrahima diallo
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            sory@gmail.com
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            785719115
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            <button
+              data-modal-target="userModal"
+              data-modal-toggle="userModal"
+              title="MODIFIER"
+              class="bg-blue-500 text-white px-3 py-1 rounded"
+            >
+              <i class="fas fa-edit"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">client</td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            ndiaga lo
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            ndiaga@gmail.com
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            775714386
+          </td>
+          <td
+            class="border-t border-gray-200 py-2 px-4 text-center mt-2 sm:mt-0"
+          >
+            <button
+              data-modal-target="compteModal"
+              data-modal-toggle="compteModal"
+              title="CREATION COMPTE"
+              class="bg-blue-500 text-white py-1 px-4 rounded"
+            >
+              <i class="fas fa-user-plus mr-2"></i>
+            </button>
+            <button
+              data-modal-target="userModal"
+              data-modal-toggle="userModal"
+              title="MODIFIER"
+              class="bg-blue-500 text-white px-3 py-1 rounded"
+            >
+              <i class="fas fa-edit"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            boutiquier
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            astou kane
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            astou@gmail.com
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            762346245
+          </td>
+          <td class="border-t border-gray-200 py-2 px-4 text-center">
+            <button
+              data-modal-target="userModal"
+              data-modal-toggle="userModal"
+              title="MODIFIER"
+              class="bg-blue-500 text-white px-3 py-1 rounded"
+            >
+              <i class="fas fa-edit"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Pagination -->
+  <div class="mt-4 flex justify-center sm:justify-end space-x-1">
+    <button
+      class="bg-gray-200 text-gray-600 py-1 px-3 rounded-l-md hover:bg-gray-300 focus:outline-none"
+    >
+      &lt;
+    </button>
+    <button
+      class="bg-blue-600 text-white py-1 px-3 hover:bg-blue-700 focus:outline-none"
+    >
+      1
+    </button>
+    <button
+      class="bg-blue-600 text-white py-1 px-3 hover:bg-blue-700 focus:outline-none"
+    >
+      2
+    </button>
+    <button
+      class="bg-gray-200 text-gray-600 py-1 px-3 rounded-r-md hover:bg-gray-300 focus:outline-none"
+    >
+      &gt;
+    </button>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Gestion de Boutique</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <link rel="stylesheet" href="./CSS/Dashboard.css" />
+
+    <link rel="stylesheet" href="./CSS/ClientModal.css" />
+    <link rel="stylesheet" href="./CSS/User.css" />
+    <link rel="stylesheet" href="./CSS/tailwind.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div
+      class="bg-white shadow-2xl rounded-lg overflow-hidden max-w-4xl w-full grid grid-cols-1 md:grid-cols-2"
+      id="connexion"
+    ></div>
+    <div class="flex flex-col md:flex-row" id="content">
+      <div class="sidebar" id="sidebar"></div>
+      <div class="content">
+        <header
+          class="flex flex-col sm:flex-row justify-between items-center bg-white shadow-md px-4 py-2 header ml-5"
+          id="header"
+        ></header>
+        <main
+          class="mt-8 mx-4 md:mr-8 rounded-xl bg-white p-4 shadow-sm flex flex-col main-content"
+          id="moi"
+        ></main>
+      </div>
+    </div>
+    <div
+      id="clientModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full"
+    ></div>
+    <div
+      id="articleModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full"
+    ></div>
+    <div
+      id="compteModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="fixed top-0 left-0 right-0 z-50 w-full p-4 hidden overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    ></div>
+    <div
+      id="userModal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full"
+    ></div>
+    <!-- Flowbite script chargé ici -->
+    <script type="module">
+      import Router from "./JS/router/Router.js";
+      const router = new Router();
+      router.run();
+    </script>
+    <script>
+      // Le script sera exécuté au chargement de la page
+      // const image = document.getElementById("log");
+      // if (image != null) {
+      //   image.addEventListener("click", () => {
+      //     location.reload();
+      //   });
+      // }
+    </script>
+  </body>
+</html>

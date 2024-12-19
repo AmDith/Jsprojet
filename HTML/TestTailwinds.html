@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Gestion de Boutique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <link rel="stylesheet" href="../CSS/Dashboard.css" />
+    <link rel="stylesheet" href="../CSS/tailwind.min.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="flex flex-col md:flex-row">
+      <!-- Sidebar -->
+      <div class="bg-blue-800 text-white h-screen w-full md:w-64 flex-shrink-0">
+        <div class="p-4 flex items-center h-32">
+          <svg
+            class="w-16 h-16 mr-2"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="40" height="24" rx="4" fill="white" />
+            <path
+              d="M17 8H7C5.89543 8 5 8.89543 5 10V16C5 17.1046 5.89543 18 7 18H17C18.1046 18 19 17.1046 19 16V10C19 8.89543 18.1046 8 17 8Z"
+              stroke="#1E40AF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M12 12C12.5523 12 13 11.5523 13 11C13 10.4477 12.5523 10 12 10C11.4477 10 11 10.4477 11 11C11 11.5523 11.4477 12 12 12Z"
+              stroke="#1E40AF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16 16H8"
+              stroke="#1E40AF"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <div class="flex flex-col text-white font-bold text-xl">
+            <span>GESTION</span>
+            <span>BOUTIQUE</span>
+          </div>
+        </div>
+        <nav class="mt-6">
+          <a
+            href="../SuperAdmin/dashboard.html"
+            class="block py-3 px-4 hover:bg-gray-600 text-sm font-semibold flex items-center"
+          >
+            <i class="fas fa-tachometer-alt text-lg mr-3"></i>
+            Dashboard
+          </a>
+          <a
+            href="../Boutiquier/sidebard.html"
+            class="block py-3 px-4 hover:bg-gray-600 text-sm font-semibold flex items-center"
+          >
+            <i class="fas fa-dollar-sign text-lg mr-3"></i>
+            Dettes
+          </a>
+          <a
+            href="../Boutiquier/searchClient.html"
+            class="block py-3 px-4 hover:bg-gray-600 text-sm font-semibold flex items-center"
+          >
+            <i class="fas fa-users text-lg mr-3"></i>
+            Clients
+          </a>
+          <a
+            href="../Boutiquier/articles.html"
+            class="block py-3 px-4 hover:bg-gray-600 text-sm font-semibold flex items-center"
+          >
+            <i class="fas fa-box text-lg mr-3"></i>
+            Articles
+          </a>
+          <a
+            href="../Boutiquier/demandes.html"
+            class="block py-3 px-4 hover:bg-gray-600 text-sm font-semibold flex items-center"
+          >
+            <i class="fas fa-envelope text-lg mr-3"></i>
+            Demandes
+          </a>
+          <a
+            href="../SuperAdmin/ecranAdmin.html"
+            class="block py-3 px-4 hover:bg-gray-600 text-sm font-semibold flex items-center"
+          >
+            <i class="fas fa-user text-lg mr-3"></i>
+            Utilisateurs
+          </a>
+        </nav>
+      </div>
+
+      <!-- Contenu principal -->
+      <div class="flex-grow p-6">
+        <div class="text-xl font-bold text-gray-700 mb-4">Tableau de Bord</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <!-- Card 1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">
+              Total des Ventes
+            </h3>
+            <p class="text-3xl font-bold text-blue-800">15,320€</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">
+              Nombre de Clients
+            </h3>
+            <p class="text-3xl font-bold text-green-600">120</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">
+              Demandes en attente
+            </h3>
+            <p class="text-3xl font-bold text-red-600">8</p>
+          </div>
+        </div>
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-lg font-bold text-gray-700 mb-4">
+            Dernières Activités
+          </h3>
+          <ul class="space-y-3">
+            <li class="flex justify-between items-center">
+              <span class="text-gray-600">Commande #12345</span>
+              <span class="text-sm text-gray-500">Il y a 2 heures</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-600">Client ajouté : John Doe</span>
+              <span class="text-sm text-gray-500">Il y a 5 heures</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-gray-600">Article en rupture : Widget Pro</span>
+              <span class="text-sm text-gray-500">Hier</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

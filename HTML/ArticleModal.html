@@ -1,0 +1,138 @@
+<!-- Modal content -->
+<div
+  class="bg-white rounded-lg shadow-lg relative w-full max-w-md mx-auto"
+  id="articleModal"
+>
+  <!-- Modal header -->
+  <div class="flex justify-between items-center p-4 border-b rounded-t">
+    <h3 class="text-xl font-semibold text-gray-900">Nouvel Article</h3>
+    <button
+      type="button"
+      class="text-black-200 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex items-center bg-red-500"
+      data-modal-hide="articleModal"
+      aria-label="Fermer"
+    >
+      <svg
+        aria-hidden="true"
+        class="w-5 h-5"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+  </div>
+  <!-- Modal body -->
+  <div class="p-6 space-y-6">
+    <form
+      method="POST"
+      {#
+      action="http://127.0.0.1:8000/api/articlespost"
+      #}
+      enctype="multipart/form-data"
+      id="formArticle"
+    >
+      <!-- Libellé -->
+      <div class="mb-4">
+        <label for="libelle" class="block text-sm font-medium text-gray-700"
+          >Libellé</label
+        >
+        <input
+          type="text"
+          id="libelle"
+          name="libelle"
+          class="block w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <!-- Prix Unitaire -->
+      <div class="mb-4">
+        <label
+          for="prixUnitaire"
+          class="block text-sm font-medium text-gray-700"
+          >Prix Unitaire</label
+        >
+        <input
+          type="number"
+          id="prixUnitaire"
+          name="prixUnitaire"
+          class="block w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <!-- Quantité -->
+      <div class="mb-4">
+        <label for="quantite" class="block text-sm font-medium text-gray-700"
+          >Quantité</label
+        >
+        <input
+          type="number"
+          id="quantite"
+          name="quantite"
+          class="block w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <!-- Prix Details -->
+      <div class="mb-4">
+        <label for="prixDetails" class="block text-sm font-medium text-gray-700"
+          >Prix Détails</label
+        >
+        <input
+          type="number"
+          id="prixDetails"
+          name="prixDetails"
+          class="block w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <!-- Categories -->
+      <div class="mb-4">
+        <label for="categories" class="block text-sm font-medium text-gray-700"
+          >Catégories</label
+        >
+        <select
+          id="categories"
+          name="categories"
+          class="block w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+        >
+          <option value="alimentaire">Alimentaire</option>
+          <option value="cosmetique">Cosmétique</option>
+          <option value="electronique">Électronique</option>
+        </select>
+      </div>
+      <!-- Promotion -->
+      <div class="mb-4">
+        <label for="promotion" class="block text-sm font-medium text-gray-700"
+          >Promotion</label
+        >
+        <input
+          type="text"
+          id="promotion"
+          name="promotion"
+          class="block w-full p-2.5 border border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <!-- Modal footer -->
+      <div class="flex justify-end space-x-2 pt-4 border-t">
+        <button
+          type="button"
+          data-modal-hide="articleModal"
+          class="text-white bg-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg text-sm px-5 py-2.5"
+        >
+          Annuler
+        </button>
+        <button
+          {#
+          id="btnSubmit"
+          #}
+          type="submit"
+          class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5"
+        >
+          Enregistrer
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

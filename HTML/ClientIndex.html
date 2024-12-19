@@ -1,0 +1,54 @@
+<div class="product-lists">
+  <div class="product-list bg-white rounded-lg shadow p-4 w-full">
+    <div class="mb-4 text-xl font-bold text-black">Lister Clients</div>
+    <!-- Header -->
+
+    <!-- Filter and New Client Button -->
+    <div class="flex flex-wrap justify-between items-center mb-4">
+      <!-- Filter by Phone -->
+      <div class="flex items-center space-x-2">
+        <input
+          id="searchPhoneInput"
+          type="text"
+          placeholder="Filtrer par Telephone"
+          class="p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none w-1/2"
+        />
+        <button
+          id="searchPhoneButton"
+          class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+        >
+          OK
+        </button>
+      </div>
+      <!-- New Client Button -->
+      <div class="flex gap-4">
+        <button
+          id="nouveauClientButton"
+          data-modal-target="clientModal"
+          data-modal-toggle="clientModal"
+          class="px-4 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 mt-2 sm:mt-0"
+        >
+          Nouvelle Client
+        </button>
+      </div>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="min-w-full">
+        <thead class="bg-blue-600 text-white">
+          <tr>
+            <th class="px-6 py-3 text-left">PRENOM ET NOM</th>
+            <th class="px-6 py-3 text-left">TELEPHONE</th>
+            <th class="px-6 py-3 text-left">ADRESSE</th>
+            <th class="px-6 py-3 text-left">MONTANT DUE</th>
+            <th class="px-6 py-3 text-left">ACTION</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700" id="trut"></tbody>
+      </table>
+    </div>
+    <div
+      id="pagination"
+      class="flex justify-end mt-4 mb-2 sm:mb-0 space-x-2"
+    ></div>
+  </div>
+</div>

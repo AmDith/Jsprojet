@@ -1,0 +1,131 @@
+<div
+    class="p-8"
+    style="background: linear-gradient(to right, #2b6cb0, #2d3748)"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Carte Total des Dettes -->
+      <div class="stat-card rounded-lg p-6 text-white">
+        <div class="flex items-center mb-4">
+          <div
+            class="stat-icon w-12 h-12 rounded-full flex items-center justify-center mr-4"
+          >
+            <i class="fas fa-money-bill-wave text-xl"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Total des Dettes</h3>
+        </div>
+        <p class="text-3xl font-bold mb-2">500.000 CFA</p>
+        <div class="flex items-center text-sm">
+          <i class="fas fa-arrow-up mr-1 text-green-400"></i>
+          <span class="text-green-400">3.5%</span>
+          <span class="ml-2 text-gray-300">depuis le mois dernier</span>
+        </div>
+      </div>
+
+      <!-- Carte Nombre de Clients -->
+      <div class="stat-card rounded-lg p-6 text-white">
+        <div class="flex items-center mb-4">
+          <div
+            class="stat-icon w-12 h-12 rounded-full flex items-center justify-center mr-4"
+          >
+            <i class="fas fa-users text-xl"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Nombre de Clients</h3>
+        </div>
+        <p class="text-3xl font-bold mb-2">120</p>
+        <div class="flex items-center text-sm">
+          <i class="fas fa-arrow-up mr-1 text-green-400"></i>
+          <span class="text-green-400">5%</span>
+          <span class="ml-2 text-gray-300">depuis la semaine dernière</span>
+        </div>
+      </div>
+
+      <!-- Carte Articles en Stock -->
+      <div class="stat-card rounded-lg p-6 text-white">
+        <div class="flex items-center mb-4">
+          <div
+            class="stat-icon w-12 h-12 rounded-full flex items-center justify-center mr-4"
+          >
+            <i class="fas fa-boxes text-xl"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Articles en Stock</h3>
+        </div>
+        <p class="text-3xl font-bold mb-2">250</p>
+        <div class="flex items-center text-sm">
+          <i class="fas fa-arrow-down mr-1 text-red-400"></i>
+          <span class="text-red-400">2%</span>
+          <span class="ml-2 text-gray-300">depuis hier</span>
+        </div>
+      </div>
+
+      <!-- Carte Demandes en Cours -->
+      <div class="stat-card rounded-lg p-6 text-white">
+        <div class="flex items-center mb-4">
+          <div
+            class="stat-icon w-12 h-12 rounded-full flex items-center justify-center mr-4"
+          >
+            <i class="fas fa-exclamation-circle text-xl"></i>
+          </div>
+          <h3 class="text-lg font-semibold">Demandes en Cours</h3>
+        </div>
+        <p class="text-3xl font-bold mb-2">15</p>
+        <div class="flex items-center text-sm">
+          <i class="fas fa-arrow-up mr-1 text-green-400"></i>
+          <span class="text-green-400">10%</span>
+          <span class="ml-2 text-gray-300">depuis hier</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Section des deux tableaux -->
+  <section class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- Tableau des Clients -->
+    <div class="overflow-x-auto">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">
+        Liste des Clients
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="bg-white shadow-lg rounded-lg w-full">
+          <thead>
+            <tr>
+              <th class="py-3 px-6 text-center">Nom</th>
+              <th class="py-3 px-6 text-center">Prénom</th>
+              <th class="py-3 px-6 text-center">Telephone</th>
+              <th class="py-3 px-6 text-center">Montant Dette</th>
+            </tr>
+          </thead>
+          <tbody id="trut">
+          </tbody>
+        </table>
+      </div>
+      <div
+        id="pagination"
+        class="flex justify-end mt-4 mb-2 sm:mb-0 space-x-2"
+      ></div>
+    </div>
+
+    <!-- Tableau des Articles en Rupture de Stock -->
+    <div class="overflow-x-auto">
+      <h2 class="text-xl font-semibold text-gray-800 mb-4">
+        Articles en Rupture de Stock
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="bg-white shadow-lg rounded-lg w-full">
+          <thead>
+            <tr>
+              <th class="py-3 px-6 text-center">Article</th>
+              <th class="py-3 px-6 text-center">Quantité Restante</th>
+              <th class="py-3 px-6 text-center">prix</th>
+            </tr>
+          </thead>
+          <tbody id="trut2">
+            <!-- Ajoutez d'autres lignes selon les données disponibles -->
+          </tbody>
+        </table>
+      </div>
+      <div
+      id="pagination2"
+      class="flex justify-end mt-4 mb-2 sm:mb-0 space-x-2"
+    ></div>
+    </div>
+  </section>
+</main>
